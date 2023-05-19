@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content=
+		"width=device-width, initial-scale=1.0">
+	<title>
+		Mental health survey
+	</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/form.css') }}">
+	
+</head>
+
+<body>
+   
+	<!-- Create Form -->
+    <div class="contain">
+         
+
+
+    <div class="p">
+        <h1>Mental health Survey  </h1>
+	<form id="form" action="/predict" method="POST">
+
+        <!---1. question-->
+		<div class="form-control">
+			<label for="education" id="education">
+				What’s your Education level ?
+			</label>
+			<!-- Dropdown options -->
+			<select name="education" id="education">
+				<option value=0>Currently pursuing highSchool</option>
+				<option value=1>Completed highschool</option>
+				<option value=2>Currently pursuing undergraduate
+                </option>
+				<option value=3 >Completed Undergraduate
+                </option>
+                <option value=4>Currently pursuing masters</option>
+				<option value=5>Completed masters</option>
+				<option value=6>Currently pursuing PHD
+                </option>
+				<option value=7 >Completed PHD
+                </option>
+			</select>
+		</div>
+        
+        <!---2. question-->
+		<div class="form-control">
+			<label>
+                Have you observed that there is a lack of concentration while doing any work ?
+			</label>
+			<!-- Input Type Radio Button -->
+			<select name="concentration" id="concentration">
+                <option value=1>Yes</option>
+				<option value=0>No</option>
+            </select>
+		</div>
+
+        <!---3. question-->
+		<div class="form-control">
+			<label>
+                Do you feel Anxious nowadays ?
+			</label>
+			<!-- Input Type Radio Button -->
+			<select name="Anxious" id="Anxious">
+                <option value=1>Yes</option>
+				<option value=0>No</option>
+            </select>
+		</div>
+
+        <!---4. question-->
+        <div class="form-control">
+			<label>
+                Are you depressed?
+			</label>
+			<!-- Input Type Radio Button -->
+			<select name="depressed" id="depressed">
+                <option value=1>Yes</option>
+				<option value=0>No</option>
+            </select>
+		</div>
+
+        <!---5. question-->
+        <div class="form-control">
+			<label>
+                Do you overthink a lot nowadays?
+			</label>
+			<!-- Input Type Radio Button -->
+			<select name="overthink" id="overthink">
+                <option value=1>Yes</option>
+				<option value=0>No</option>
+            </select>
+		</div>
+
+        <!---6. question-->
+        <div class="form-control">
+			<label>
+                Does your mood changes quite often ?
+			</label>
+			<!-- Input Type Radio Button -->
+			<select name="mood" id="mood">
+                <option value=1>Yes</option>
+				<option value=0>No</option>
+            </select>
+		</div>
+
+
+        <!---7. question-->
+        <div class="form-control">
+			<label>
+                Do you panic ?
+			</label>
+			<!-- Input Type Radio Button -->
+			<select name="panic" id="panic">
+                <option value=1>Yes</option>
+				<option value=0>No</option>
+            </select>
+		</div>
+
+        <!---8. question-->
+        <div class="form-control">
+			<label>
+                Have you observed any compulsive behaviour (repeating the same work again and again) ?
+			</label>
+			<!-- Input Type Radio Button -->
+			<select name="compulsive" id="compulsive">
+                <option value=1>Yes</option>
+				<option value=0>No</option>
+            </select>
+		</div>
+
+        <!---9. question-->
+        <div class="form-control">
+			<label>
+                Do you feel tired every time you start any work ?
+			</label>
+			<!-- Input Type Radio Button -->
+			<select name="tired" id="tired">
+                <option value=1>Yes</option>
+				<option value=0>No</option>
+            </select>
+		</div>
+
+        <!---10. question-->
+        <div class="form-control">
+			<label for="age" id="age">
+				What’s Age group ?
+			</label>
+			<!-- Dropdown options -->
+			<select name="age" id="age">
+				<option value=0>18-29 years</option>
+				<option value=1>30-44 years</option>
+				<option value=2>45-60 years</option>
+				<option value=3 > Greater than 60 years</option>
+			</select>
+		</div>
+
+        <!---11. question-->
+        <div class="form-control">
+			<label>
+                What’s your gender?
+			</label>
+			<!-- Input Type Radio Button -->
+			<select name="gender" id="gender">
+                <option value=1>Male</option>
+				<option value=0>Female</option>
+            </select>
+		</div>
+		<!-- Multi-line Text Input Control -->
+		<button type="submit" value="submit">
+			Submit
+		</button>
+	</form>
+
+    <h1>{{result}}</h1>
+    
+    </div>
+</div>
+</body>
+
+</html>
